@@ -15,12 +15,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gke-test
+  name: aks-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gke-test
+      app: aks-test
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -29,11 +29,11 @@ spec:
   template:
     metadata:
       labels:
-        app: gke-test
+        app: aks-test
     spec:
       containers:
-      - name: gke-test
-        image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
+      - name: aks-test
+        image: expressazure.azurecr.io/nodejs:latest
         ports:
         - containerPort: 5000
         resources:

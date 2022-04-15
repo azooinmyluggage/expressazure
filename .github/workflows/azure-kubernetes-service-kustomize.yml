@@ -43,7 +43,7 @@ env:
   RESOURCE_GROUP: "expressazure-rg"
   CLUSTER_NAME: "expressazure"
   IMAGE_PULL_SECRET_NAME: "expressazure"
-  KUSTOMIZE_PATH: "kustomize"
+  KUSTOMIZE_PATH: "./kustomize/"
 
 jobs:
   build:
